@@ -9,7 +9,7 @@ services:
       dockerfile: ./docker/php/Dockerfile
     volumes:
       - php-fpm-socket:/var/run/php-fpm
-      - ./domain-driven-development-ci:/workspace
+      - ../domain-driven-development-ci:/workspace
 
   web:
     build:
@@ -19,7 +19,7 @@ services:
       - 80:80
     volumes:
       - php-fpm-socket:/var/run/php-fpm
-      - ./domain-driven-development-ci:/workspace
+      - ../domain-driven-development-ci:/workspace
 
   db:
     build:
