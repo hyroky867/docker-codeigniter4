@@ -16,7 +16,7 @@ services:
       context: .
       dockerfile: ./docker/nginx/Dockerfile
     ports:
-      - 80:80
+      - 8000:80
     volumes:
       - php-fpm-socket:/var/run/php-fpm
       - ../domain-driven-development-ci:/workspace
